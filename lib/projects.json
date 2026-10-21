@@ -1,0 +1,74 @@
+[
+  {
+    "title": "Strux",
+    "year": "2026",
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "description": "A real-time collaborative document editor supporting 10+ concurrent users via Yjs CRDTs and WebSockets, with Git-style branching over TipTap and PostgreSQL."
+  },
+  {
+    "title": "Converge",
+    "year": "2026",
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "description": "A React Native mobile data aggregator that captures links, posts, and screenshots into a unified feed, with Node.js LLM parsing and Pinecone semantic search."
+  },
+  {
+    "title": "Personal Portfolio Website",
+    "year": "2026",
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "description": "This personal portfolio site from DSC 106 Labs 1–4, built with HTML, CSS, and JavaScript modules for navigation, themes, and dynamic project data."
+  },
+  {
+    "title": "Nutritional Equity Index",
+    "year": "2026",
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "description": "HDSI research modeling a ZIP-level Nutritional Equity Index from food distribution records, using pandas on a panel of 100,000 administrative records."
+  },
+  {
+    "title": "Power Outage Duration Analytics",
+    "year": "2025",
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "description": "A data pipeline processing 1,535 federal electrical grid records to model major outage durations with pandas, permutation tests, and Random Forest regression."
+  },
+  {
+    "title": "ACM Club Websites",
+    "year": "2025",
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "description": "Next.js and Tailwind CSS club websites built with ACM to scale user acquisition across 300+ active student members, with GitHub Actions CI/CD."
+  },
+  {
+    "title": "Placeholder: Lorem ipsum dolor sit",
+    "year": "2025",
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+  },
+  {
+    "title": "Placeholder: Ut enim ad minim",
+    "year": "2024",
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "description": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+  },
+  {
+    "title": "Placeholder: Duis aute irure dolor",
+    "year": "2024",
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "description": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+  },
+  {
+    "title": "Placeholder: Excepteur sint occaecat",
+    "year": "2024",
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "description": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+  },
+  {
+    "title": "Placeholder: Sed ut perspiciatis unde",
+    "year": "2023",
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "description": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium."
+  },
+  {
+    "title": "Placeholder: Nemo enim ipsam",
+    "year": "2023",
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "description": "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur."
+  }
+]

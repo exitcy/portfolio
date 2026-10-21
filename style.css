@@ -95,8 +95,18 @@ form > button {
   grid-row: span 3;
 }
 
-.projects h2 {
+.projects h2,
+.projects h3,
+.projects h4,
+.projects h5,
+.projects h6 {
   margin: 0;
+}
+
+.projects .year {
+  margin: 0;
+  font-variant-numeric: tabular-nums;
+  color: color-mix(in oklch, canvasText 70%, canvas);
 }
 
 section {
@@ -110,4 +120,21 @@ section > h2 {
 
 section article {
   margin-bottom: 1em;
+}
+
+#profile-stats dl {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin: 0;
+  text-align: center;
+}
+
+#profile-stats dt {
+  grid-row: 1;
+  font-weight: 600;
+}
+
+#profile-stats dd {
+  grid-row: 2;
+  margin: 0;
 }
