@@ -106,9 +106,19 @@ function renderTooltipContent(commit) {
   lines.textContent = commit.totalLines;
 }
 
+let tooltipHideTimeout;
+
 function updateTooltipVisibility(isVisible) {
   const tooltip = document.getElementById('commit-tooltip');
-  tooltip.hidden = !isVisible;
+  if (isVisible) {
+    clearTimeout(tooltipHideTimeout);
+    tooltip.hidden = false;
+  } else {
+    clearTimeout(tooltipHideTimeout);
+    tooltipHideTimeout = setTimeout(() => {
+      tooltip.hidden = true;
+    }, 120);
+  }
 }
 
 function updateTooltipPosition(event) {
@@ -129,6 +139,17 @@ function updateTooltipPosition(event) {
 
   tooltip.style.left = `${left}px`;
   tooltip.style.top = `${top}px`;
+}
+
+function setupTooltipInteraction() {
+  const tooltip = document.getElementById('commit-tooltip');
+  tooltip.addEventListener('mouseenter', () => {
+    clearTimeout(tooltipHideTimeout);
+    tooltip.hidden = false;
+  });
+  tooltip.addEventListener('mouseleave', () => {
+    updateTooltipVisibility(false);
+  });
 }
 
 function isCommitSelected(selection, commit) {
@@ -204,7 +225,7 @@ function createBrushSelector(svg, usableArea) {
 function renderScatterPlot(data, commits) {
   const width = 1000;
   const height = 600;
-  const margin = { top: 10, right: 10, bottom: 30, left: 50 };
+  const margin = { top: 10, right: 10, bottom: 40, left: 50 };
 
   const usableArea = {
     top: margin.top,
@@ -247,13 +268,17 @@ function renderScatterPlot(data, commits) {
     d3.axisLeft(yScale).tickFormat('').tickSize(-usableArea.width),
   );
 
-  const xAxis = d3.axisBottom(xScale);
+  const xAxis = d3
+    .axisBottom(xScale)
+    .ticks(8)
+    .tickFormat(d3.timeFormat('%b %d'));
   const yAxis = d3
     .axisLeft(yScale)
     .tickFormat((d) => String(d).padStart(2, '0') + ':00');
 
   svg
     .append('g')
+    .attr('class', 'x-axis')
     .attr('transform', `translate(0, ${usableArea.bottom})`)
     .call(xAxis);
 
@@ -291,6 +316,8 @@ function renderScatterPlot(data, commits) {
 
   createBrushSelector(svg, usableArea);
 }
+
+setupTooltipInteraction();
 
 let data = await loadData();
 commits = processCommits(data);

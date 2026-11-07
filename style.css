@@ -246,6 +246,10 @@ path.selected {
   stroke: none;
 }
 
+#chart .x-axis text {
+  font-size: 11px;
+}
+
 #chart circle {
   transition: transform 200ms, fill-opacity 200ms;
   transform-origin: center;
@@ -270,7 +274,7 @@ path.selected {
   border: 1px solid var(--color-border);
   border-radius: 0.4em;
   box-shadow: 0 0.25em 0.75em color-mix(in oklch, canvasText 20%, transparent);
-  pointer-events: none;
+  pointer-events: auto;
   opacity: 1;
   transition: opacity 150ms;
 }
@@ -279,6 +283,11 @@ path.selected {
   display: block;
   opacity: 0;
   visibility: hidden;
+  pointer-events: none;
+}
+
+#commit-tooltip a {
+  pointer-events: auto;
 }
 
 #commit-tooltip dt {
