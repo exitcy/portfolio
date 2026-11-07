@@ -208,3 +208,97 @@ path.selected {
   margin-block: 1em 1.5em;
   padding: 0.5em;
 }
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(8em, 1fr));
+  margin: 1em 0;
+  text-align: center;
+  gap: 0.5em 1em;
+}
+
+.stats dt {
+  font-weight: 600;
+}
+
+.stats dd {
+  margin: 0;
+}
+
+#chart {
+  width: 100%;
+  max-width: 100%;
+  margin-block: 1em;
+}
+
+#chart svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+#chart .gridlines line {
+  stroke: var(--color-border);
+  stroke-opacity: 0.5;
+}
+
+#chart .gridlines path {
+  stroke: none;
+}
+
+#chart circle {
+  transition: transform 200ms, fill-opacity 200ms;
+  transform-origin: center;
+  transform-box: fill-box;
+  cursor: pointer;
+}
+
+#chart circle:hover {
+  transform: scale(1.5);
+}
+
+#chart circle.selected {
+  fill: oklch(60% 45% 0);
+}
+
+#commit-tooltip {
+  position: fixed;
+  z-index: 10;
+  margin: 0;
+  padding: 0.75em 1em;
+  background: canvas;
+  border: 1px solid var(--color-border);
+  border-radius: 0.4em;
+  box-shadow: 0 0.25em 0.75em color-mix(in oklch, canvasText 20%, transparent);
+  pointer-events: none;
+  opacity: 1;
+  transition: opacity 150ms;
+}
+
+#commit-tooltip[hidden] {
+  display: block;
+  opacity: 0;
+  visibility: hidden;
+}
+
+#commit-tooltip dt {
+  font-weight: 600;
+  margin-top: 0.35em;
+}
+
+#commit-tooltip dt:first-child {
+  margin-top: 0;
+}
+
+#commit-tooltip dd {
+  margin: 0;
+}
+
+#selection-count {
+  margin-block: 1em 0.5em;
+}
+
+.selection {
+  fill: color-mix(in oklch, var(--color-accent) 15%, transparent);
+  stroke: var(--color-accent);
+}

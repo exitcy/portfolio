@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meta — Codebase Analysis</title>
+    <link rel="stylesheet" href="../style.css">
+    <script src="../global.js" type="module"></script>
+    <script src="main.js" type="module"></script>
+</head>
+<body>
+    <h1>Codebase Analysis</h1>
+    <p>
+        This page visualizes development activity in this portfolio repository
+        using line-of-code data generated from the project's Git history.
+    </p>
+
+    <div id="stats"></div>
+
+    <h2>Commits by time of day</h2>
+    <div id="chart"></div>
+
+    <dl id="commit-tooltip" class="info tooltip" hidden>
+        <dt>Commit</dt>
+        <dd><a href="" id="commit-link" target="_blank" rel="noopener noreferrer"></a></dd>
+
+        <dt>Date</dt>
+        <dd id="commit-date"></dd>
+
+        <dt>Time</dt>
+        <dd id="commit-time"></dd>
+
+        <dt>Author</dt>
+        <dd id="commit-author"></dd>
+
+        <dt>Lines edited</dt>
+        <dd id="commit-lines"></dd>
+    </dl>
+
+    <p id="selection-count">No commits selected</p>
+    <dl id="language-breakdown" class="stats"></dl>
+</body>
+</html>
