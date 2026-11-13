@@ -95,6 +95,12 @@ form > button {
   grid-row: span 3;
 }
 
+.projects img {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+}
+
 .projects h2,
 .projects h3,
 .projects h4,
