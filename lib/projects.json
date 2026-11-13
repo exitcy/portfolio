@@ -2,7 +2,7 @@
   {
     "title": "Bikewatching",
     "year": "2026",
-    "image": "images/bikewatching.png",
+    "image": "images/Screenshot_1.png",
     "description": "Interactive Mapbox + D3 visualization of Boston and Cambridge BlueBikes traffic, with bike-lane overlays, station activity sizing, departure/arrival flow colors, and a time-of-day filter.",
     "url": "https://exitcy.github.io/bikewatching/"
   },
