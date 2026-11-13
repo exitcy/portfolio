@@ -1,5 +1,12 @@
 [
   {
+    "title": "Bikewatching",
+    "year": "2026",
+    "image": "images/bikewatching.png",
+    "description": "Interactive Mapbox + D3 visualization of Boston and Cambridge BlueBikes traffic, with bike-lane overlays, station activity sizing, departure/arrival flow colors, and a time-of-day filter.",
+    "url": "https://exitcy.github.io/bikewatching/"
+  },
+  {
     "title": "Strux",
     "year": "2026",
     "image": "https://vis-society.github.io/labs/2/images/empty.svg",

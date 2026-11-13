@@ -104,9 +104,16 @@ export function renderProjects(
 
   for (let project of projects) {
     const article = document.createElement("article");
+    const imageSrc =
+      project.image && /^https?:\/\//i.test(project.image)
+        ? project.image
+        : `${BASE_PATH}${project.image ?? ""}`;
+    const titleHtml = project.url
+      ? `<a href="${project.url}" target="_blank" rel="noopener">${project.title}</a>`
+      : project.title;
     article.innerHTML = `
-      <${validHeading}>${project.title}</${validHeading}>
-      <img src="${project.image}" alt="${project.title}">
+      <${validHeading}>${titleHtml}</${validHeading}>
+      <img src="${imageSrc}" alt="${project.title}">
       <div>
         <p>${project.description}</p>
         <p class="year">${project.year}</p>
